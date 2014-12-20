@@ -1,53 +1,101 @@
-<!DOCTYPE html> <!-- Esto es HTML5 -->
-<!-- HTML: Idioma por pagina -->
+<!DOCTYPE html>
 <html lang="es">
-	<!-- Etiquetas necesarias que no son contenido -->
-	<head>
-		<!-- Atributo: codificación -->
-		<meta charset="utf-8" />
-		<!-- Titulo de la pagina: entre 60 a 70 caracteres -->
-		<title>Frontend: esta es la pagina principal</title>
-		<!-- Descripción: entre 155 a 160 caracteres -->
-		<meta name="description" content="Curso de Frontend online" />
-		<!-- Keywords: entre 300 caracteres -->
-		<meta name="keywords" content="html, css, backbone, django, node" />
-	</head>
-	<!-- Contenido HTML -->
-	<body>
-		<!-- Cabecera -->
-		<header>
-			<figure id="logo">
-				<img src="https://yahoov4s1-a.akamaihd.net/sj/2196/2358758936_c928ef7401.jpg" />
-			</figure>
-			<h1>Curso de Frontend</h1>
-			<!-- Menu de navegación -->
-			<nav>
-				<li><a href="#">HTML</a></li>
-				<li><a href="#">CSS</a></li>
-				<li><a href="#">Backbone</a></li>
-				<li><a href="#">Django</a></li>
-				<li><a href="#">Node.js</a></li>
-			</nav>
-		</header>
-		<!-- Contenido -->
-		<section>
-			<!-- Articulo -->
-			<article class="item">
-				<figure class="figure_item">
-					<img src="http://farm5.staticflickr.com/4054/4514904944_c03254f204_z.jpg" />
-				</figure>
-				<h2 class="title_item">
-					<a href="#">Título</a>
-				</h2>
-				<div class="data_item">
-					<span>Texto descriptivo</span>
-				</div>
-			</article>
-		</section>
-		<!-- Pie de pagina -->
-		<footer>
-			<strong>Mejorando.la</strong>
-			<p>Texto de parrafo</p>
-		</footer>
-	</body>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esto va a ser un blog en foundation</title>
+    <link rel="stylesheet" href="foundation/css/foundation.css" />
+    <script src="foundation/js/vendor/modernizr.js"></script>
+</head>
+<body>
+    <header class="row">
+    <h1>
+        Esto es un blog basado en Foundation
+    </h1>
+
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="#">My Site</a></h1>
+        </li>
+         <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li class="active"><a href="#">Right Button Active</a></li>
+          <li class="has-dropdown">
+            <a href="#">Right Button Dropdown</a>
+            <ul class="dropdown">
+              <li><a href="#">First link in dropdown</a></li>
+              <li class="active"><a href="#">Active link in dropdown</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- Left Nav Section -->
+        <ul class="left">
+          <li><a href="#">Left Nav Button</a></li>
+        </ul>
+  </section>
+</nav>
+    </header>
+    <section class="row">
+        <section class="small-12 medium-8 large-8 columns">
+            <article class="row panel">
+               <h2>Título del post</h2>
+               <p>
+                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum soluta mollitia quia tempora voluptatem voluptate labore eos suscipit doloremque, officiis nobis eaque quaerat, quis amet nostrum quo excepturi aliquam sunt!
+               </p>
+               <a href="" class="button radius">Ir al Post</a>
+                
+            </article> 
+            <article class="row panel">
+               <h2>Título del post</h2>
+                   <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum soluta mollitia quia tempora voluptatem voluptate labore eos suscipit doloremque, officiis nobis eaque quaerat, quis amet nostrum quo excepturi aliquam sunt!                   
+                   </p>
+                   <a href="" class="button round small">Ir al post</a>
+                   <a href="" class="button round medium">Ir al post</a>
+                   <a href="" class="button round large">Ir al post</a>
+            </article>        
+        </section>    
+        <section class="small-12 medium-4 large-4 columns">
+            <section class="row" data-equalizer>
+                <article class="small-6 columns panel" data-equalizer-watch>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum soluta mollitia quia tempora voluptatem voluptate labore eos suscipit do
+                        Lorem ipsum dolor sit amet, consectetur
+                    </p>                    
+                </article>
+                <article class="small-6 columns panel" data-equalizer-watch>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum soluta mollitia quia tempora voluptatem voluptate labore eos suscipit do
+                    </p>
+                </article>     
+            </section>
+            <section class="row" data-equalizer>
+                <article class="small-6 columns panel" data-equalizer-watch>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum soluta mollitia quia tempora voluptatem voluptate labore eos suscipit do                    
+                </p>
+                </article>
+                <article class="small-6 columns panel" data-equalizer-watch>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum soluta mollitia quia tempora voluptatem voluptate labore eos suscipit do                    
+                </p>
+                </article>     
+            </section>
+        </section>
+    </section>
+
+    <script src="foundation/js/vendor/jquery.js"></script>
+    <script src="foundation/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+
+</body>
 </html>
