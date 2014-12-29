@@ -1,6 +1,16 @@
+@import "nib"
 @import "normalize.styl"
 @import "fonts.styl"
 
+vendor-prefixes = webkit o ms moz official NuevoMotor //así se le agregan más prefijos por si existe un nuevo motor
+
+// animacion(parametro)
+// 	-webkit-animation parametro
+// 	-moz-animation parametro
+// 	-o-animation parametro
+// 	-ms-animation parametro
+// 	animation parametro
+	
 gris_oscuro = #333333
 gris_claro = #818181
 rosa = #BD255B
@@ -92,6 +102,7 @@ ul
 		width 30%
 		border-radius 5px
 		position relative
+		animation 10s state infinite linear
 		.circle
 			background gris_oscuro
 			border-radius 50%
@@ -100,6 +111,20 @@ ul
 			position absolute
 			right 0
 			top -2px
+			animation 1s circle infinite
+		
+@keyframes state
+	0%
+		width 0
+	100%
+		width 100%
+
+@keyframes circle
+	0%
+		transform scale(1)
+	100%
+		transform scale(2)
+		opacity 0
 			
 .autor
 	color gris_claro
@@ -145,8 +170,8 @@ ul
 		
 .input
 	border 1px solid gris_claro
-	height 2.5em
 	border-radius 5px
+	height 2.5em
 	padding 0 1em 0 2em
 .search-icon
 	position absolute
@@ -231,6 +256,7 @@ ul
 					padding 1em
 					text-transform uppercase
 					border-top 5px solid transparent
+					transition 0.3s border-top
 					&:hover
 						border-top 5px solid gris_claro
 		.music
