@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Off-Canvas</title>
+	<link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+	<section class="canvas">
+		<div class="header verde_a">
+			<h1 class="header-logo">Off canvas</h1>
+			<button class="header-button is-active" id="showmenu">
+				Mostrar menú
+			</button>
+			<button class="header-button" id="hidemenu">
+				Ocultar menú
+			</button>
+			<ul class="mainmenu" id="menu">
+				<li class="mainmenu-item">
+					<a href="" class="mainmenu-link">Cursos</a>
+				</li>
+				<li class="mainmenu-item">
+					<a href="" class="mainmenu-link">Conferencias</a></li>
+				<li class="mainmenu-item">
+					<a href="" class="mainmenu-link">Eventos</a></li>
+				<li class="mainmenu-item">
+					<a href="" class="mainmenu-link">Contacto</a></li>
+			</ul>
+		</div>
+		<div class="canvas-main verde_b">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. In repudiandae eaque perspiciatis. Minus, iste suscipit fugiat tempora, aut a alias, veniam maiores aliquid voluptate totam magni deserunt consequatur tempore voluptatum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. In repudiandae eaque perspiciatis. Minus, iste suscipit fugiat tempora, aut a alias, veniam maiores aliquid voluptate totam magni deserunt consequatur tempore voluptatum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. In repudiandae eaque perspiciatis. Minus, iste suscipit fugiat tempora, aut a alias, veniam maiores aliquid voluptate totam magni deserunt consequatur tempore voluptatum.
+		</div>
+		<div class="canvas-sidebar verde_c">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur aut illo earum non labore deserunt tempore sapiente placeat nihil totam nemo mollitia, minus pariatur voluptatum! Ipsa veritatis nobis incidunt, eveniet.
+		</div>
+	</section>
+	<script src="../hammer.min.js"></script>
+	<script>
+		var $buttonShowMenu = document.getElementById('showmenu');
+		var $buttonHideMenu = document.getElementById('hidemenu'); 
+		var $buttonMenu = document.getElementById('menu');
+
+		var $body = document.querySelector('body');
+
+		var body = new Hammer($body);
+
+		var showMenu = function(){
+			$buttonShowMenu.classList.remove('is-active');
+			$buttonHideMenu.classList.add('is-active');
+			$buttonMenu.classList.add('is-active');
+		}
+
+		var hideMenu = function(){
+			$buttonShowMenu.classList.add('is-active');
+			$buttonHideMenu.classList.remove('is-active');
+			$buttonMenu.classList.remove('is-active');
+		}
+
+		$buttonShowMenu.addEventListener("click",showMenu);
+		$buttonHideMenu.addEventListener("click",hideMenu);
+
+		body.on('panright', showMenu);
+		body.on('panleft', hideMenu);
+	</script>
+</body>
+</html>

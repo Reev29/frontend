@@ -1,4 +1,9 @@
+@import "nib"
 @import "normalize.styl"
+
+verde_c = #cde1a7
+gris_a = #141f23
+gris_b = #0E0F0F
 
 .verde_a
 	background #70AA39
@@ -6,7 +11,6 @@
 	background #97c335
 .verde_c
 	background #cde1a7
-
 .mostly
 	max-width 64em
 	margin 0 auto
@@ -50,4 +54,87 @@
 	font-size 2.5em
 .tweaks-bio
 	font-size 2em
-	
+
+.canvas
+	overflow hidden
+	position relative
+	&-main
+		padding 10px 0
+	// &-menu
+	// 	left -200px
+	// 	position absolute
+	// 	width 200px
+	// 	transition 1s
+	// 	&.is-active
+	// 		left 0
+	&-sidebar
+		position absolute
+		right -200px
+		top 0
+		width 200px
+		-webkit-transition 1s
+		&.is-active
+			right 0
+.header
+	background #141f23
+	padding 10px
+	color white
+	position relative
+	height 30px
+	line-height 10px
+	&-logo
+		text-transform uppercase
+		font-weight normal
+		text-decoration underline
+		text-shadow 0 0 10px verde_c
+		font-size 18px
+	&-button
+		background orange
+		color white
+		border-radius 5px
+		padding 10px
+		border none
+		position absolute
+		right 20px
+		top 10px
+		display none
+		&.is-active
+			display block
+.mainmenu
+	transition 0.5s
+	background gris_a
+	left -200px
+	padding 0
+	position absolute
+	width 200px
+	top 0
+	margin 0
+	&.is-active
+		left 0
+	&-item
+		text-align center
+		height 50px
+		line-height 50px
+		display block
+		transition 0.5s
+		list-style none
+		&:hover
+			background gris_b
+	&-link
+		color white
+		text-decoration none
+		text-transform uppercase
+		font-size 14px
+
+@media screen and (min-width : 767px)
+	.header
+		&-button
+			display none
+	.mainmenu
+		left initial
+		right 0
+		width auto
+		&-item
+			display inline-block
+		&-link
+			padding 0 20px
